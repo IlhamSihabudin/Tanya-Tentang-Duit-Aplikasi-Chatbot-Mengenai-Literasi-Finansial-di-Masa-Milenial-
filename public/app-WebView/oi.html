@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Qiscus SDK Sample</title>
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.6.5/qiscus-sdk.2.6.5.css">
+  </head>
+  
+
+  <body>
+      
+    <div id="qiscus-widget"></div>
+    <script src="js.js"></script>
+    <!-- <script src="https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.6.5/qiscus-sdk.2.6.5.js"></script> -->
+  </body>
+</html>
+
+<style>
+.qcw-comment-form i.qcw-icon {
+    
+}
+</style>
+<script>
+var e = null,
+  t = null,
+  r = null,
+  n = null
+for (
+    var s = null,
+      a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+      c = 0;
+    c < 5;
+    c++
+  )
+    s += a.charAt(Math.floor(Math.random() * a.length));
+  var o = Date.now(),
+    i = {
+      user_id: s + "@wallstreetenglish.co.id",
+      user_key: o,
+      user_name: "WSE Guest - " + o,
+      avatar:
+        "http://imgbox.com/nBk8jJqW"
+    };
+ e = i.user_id,
+    t = i.user_key,
+    r = i.user_name,
+    n = i.avatar;
+QiscusSDK.core.init({
+  AppId: 'ttd-hreuyv0hatzfirimn',
+  options: {
+    avatar: 'https://imgbox.com/nBk8jJqW',
+    loginSuccessCallback: function() {
+      // Do something after successfully login
+      QiscusSDK.core.UI.chatTarget("ranaaretasitisyahda@gmail.com");
+    }
+  }
+ });
+QiscusSDK.core.setUser(e, t, r, n);
+ QiscusSDK.render();
+</script>
+
+
